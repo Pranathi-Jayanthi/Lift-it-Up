@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+html,body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(139, 142, 143);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#game{
+   margin: 10px;
+   width: 500px;
+   height: 200px;
+   border: 5px solid black;
+   background: linear-gradient(to bottom right,rgb(246, 201, 207),rgb(213, 242, 245),rgb(228, 202, 232));
+   transform: scale(1.5);
+}
+
+#character{
+   width: 25px;
+   height: 55px;
+   background-color: rgb(181, 91, 91);
+   position: relative;
+   top: 145px;
+   border-radius: 5%;
+}
+.animate{
+   animation: jump 500ms;
+}
+
+#ball{
+   width: 25px;
+   height: 25px;
+   background-color: rgb(78, 143, 143);
+   position: relative;
+   top: 120px;
+   left: 480px;
+   animation: ball 1s infinite linear;
+   border-radius: 50%;
+}
+
+.msg{
+   font-size: 50px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   z-index: 100;
+   font-weight: bold;
+   font-size: 50px;
+   font-family: 'Rampart One', cursive;}
+
+@keyframes ball{
+    0%{left:1000px;}
+    100%{left:-5px;}
+}
+@keyframes jump{
+    0%{top: 145px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 145px;}
+}
+
+#outer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   width: 100vw;
+}
